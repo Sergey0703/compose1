@@ -31,6 +31,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.serhiibaliasnyi.firmcard.ui.BooksApp
 import com.serhiibaliasnyi.firmcard.ui.theme.FirmCardTheme
 
 class MainActivity : ComponentActivity() {
@@ -40,14 +41,15 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             FirmCardTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color=MaterialTheme.colorScheme.background
-                ) {
-                    val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior();
-                    // A surface container using the 'background' color from the theme
-                    MainScreen(scrollBehavior)
-                }
+                BooksApp()
+//                Surface(
+//                    modifier = Modifier.fillMaxSize(),
+//                    color=MaterialTheme.colorScheme.background
+//                ) {
+//                    val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior();
+//                    // A surface container using the 'background' color from the theme
+//                    MainScreen(scrollBehavior)
+//                }
 
             }
         }
